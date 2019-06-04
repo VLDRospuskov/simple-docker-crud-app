@@ -17,7 +17,7 @@ public class KafkaController {
     public KafkaController(Producer producer) {
         this.producer = producer;
     }
-
+//    localhost:8080/kafka/publish?message=Hellofrom producer123
     @PostMapping(value = "/publish")
     public void sendMessageToKafkaTopic(@RequestParam("message") String message) {
         this.producer.sendMessage(message);
